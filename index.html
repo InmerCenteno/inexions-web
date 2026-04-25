@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0A1628">
+<title>iNexions Logistics | Tu Casillero en USA hecho por Chapines 🇬🇹</title>
+<meta name="description" content="Casillero virtual en Virginia, USA. Compra en Amazon, Shein, Temu, eBay. Precios en quetzales, factura FEL, pago contra entrega. Hecho en Virginia por chapines para chapines.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy-950: #0A1628;
+  --navy-900: #0F2040;
+  --navy-800: #1A2F5C;
+  --navy-700: #2A4480;
+  --navy-600: #3A5A9E;
+  --gold: #C9A961;
+  --gold-bright: #E3C179;
+  --gold-deep: #9B7E3D;
+  --cream: #FAF5EC;
+  --cream-light: #FDFAF3;
+  --paper: #F5EDD7;
+  --guate-green: #4A7C59;
+  --guate-green-light: #6B9C78;
+  --danger: #B33A3A;
+  --ink: #1A1A1A;
+  --ink-soft: #3F3F3F;
+  --ink-muted: #6B6B6B;
+  --line: #E8DFC9;
+  --line-soft: #F0E8D4;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.06), 0 1px 3px rgba(10, 22, 40, 0.1);
+  --shadow: 0 4px 6px -1px rgba(10, 22, 40, 0.08), 0 2px 4px -1px rgba(10, 22, 40, 0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(10, 22, 40, 0.1), 0 10px 10px -5px rgba(10, 22, 40, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(10, 22, 40, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Improve touch targets */
+button, a, input, select { touch-action: manipulation; }
+
+.paper-noise {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 1; opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ============ ANNOUNCEMENT BAR ============ */
+.announce {
+  background: var(--navy-950);
+  color: var(--cream);
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid var(--gold-deep);
+  line-height: 1.4;
+}
+.announce strong { color: var(--gold-bright); font-weight: 600; }
+
+/* ============ NAV ============ */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 245, 236, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 90;
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--navy-950);
+  flex-shrink: 0;
+}
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  background: var(--navy-950);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  font-style: italic;
+}
+.logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+}
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.logo-text em {
+  color: var(--gold-deep);
+  font-style: italic;
+  font-weight: 500;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+.nav-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-links a:hover { color: var(--navy-950); }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid var(--navy-950);
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-cta:hover {
+  background: var(--navy-800);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+.menu-toggle {
+  display: none;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 340px;
+  height: 100vh;
+  background: var(--cream);
+  box-shadow: -20px 0 40px rgba(10, 22, 40, 0.2);
+  z-index: 110;
+  padding: 80px 32px 32px;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-menu.active { right: 0; }
+.mobile-menu a {
+  padding: 16px 0;
+  color: var(--navy-950);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--navy-950);
+}
+.mobile-menu-cta {
+  margin-top: 24px;
+  padding: 16px !important;
+  background: var(--navy-950) !important;
+  color: var(--gold-bright) !important;
+  border-radius: var(--radius) !important;
+  border-bottom: 0 !important;
+  text-align: center;
+  font-family: var(--font-body) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.5);
+  z-index: 105;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-overlay.active { opacity: 1; pointer-events: auto; }
+
+/* ============ HERO ============ */
+.hero {
+  background: var(--cream);
+  position: relative;
+  padding: 80px 0 120px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0.08;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, var(--guate-green) 0%, transparent 70%);
+  opacity: 0.06;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 6px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.hero-badge-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy-950);
+  font-size: 11px;
+  font-weight: 700;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--navy-950);
+  margin-bottom: 28px;
+  font-variation-settings: "opsz" 144;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-deep);
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+}
+.hero h1 .underline {
+  position: relative;
+  display: inline-block;
+}
+.hero h1 .underline::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--gold);
+  opacity: 0.35;
+  z-index: -1;
+  transform: skew(-8deg);
+}
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+.hero-subtitle strong {
+  color: var(--navy-950);
+  font-weight: 600;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  min-height: 44px;
+}
+.btn-primary {
+  background: var(--navy-950);
+  color: var(--cream);
+  border: 1px solid var(--navy-950);
+  box-shadow: 0 1px 2px rgba(10, 22, 40, 0.1);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: var(--navy-800);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(10, 22, 40, 0.25);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--navy-950);
+  border: 1px solid var(--navy-700);
+}
+.btn-secondary:hover {
+  background: var(--navy-950);
+  color: var(--cream);
+}
+.btn-arrow { transition: transform 0.2s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+.hero-stores {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero-stores-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+.hero-stores-list {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.store {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+  position: relative;
+}
+.store:not(:last-child)::after {
+  content: '·';
+  position: absolute;
+  right: -17px;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+.hero-visual {
+  position: relative;
+  height: 580px;
+}
+.card-package {
+  position: absolute;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-xl);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-package-1 {
+  top: 0; right: 0; width: 320px;
+  transform: rotate(3deg); z-index: 3;
+}
+.card-package-1:hover { transform: rotate(0deg) translateY(-5px); }
+.card-package-2 {
+  top: 220px; left: 0; width: 280px;
+  transform: rotate(-4deg); z-index: 2;
+  background: var(--navy-950); color: var(--cream);
+  border-color: var(--navy-800);
+}
+.card-package-2:hover { transform: rotate(-2deg) translateY(-5px); }
+.card-package-3 {
+  bottom: 0; right: 40px; width: 300px;
+  transform: rotate(2deg); z-index: 1;
+  background: var(--gold); color: var(--navy-950);
+  border-color: var(--gold-deep);
+}
+.card-package-3:hover { transform: rotate(0deg) translateY(-5px); }
+
+.card-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.card-subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 13px;
+}
+.card-package-2 .card-row { border-top-color: rgba(250,245,236,0.15); }
+.card-package-3 .card-row { border-top-color: rgba(10,22,40,0.15); }
+.card-row:first-of-type { padding-top: 16px; }
+.card-row .label { opacity: 0.7; }
+.card-row .value { font-weight: 600; }
+
+/* ============ TRUST BAR ============ */
+.trust-bar {
+  background: var(--navy-950);
+  color: var(--cream);
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+.trust-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.trust-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.trust-badge:hover { opacity: 1; }
+.trust-badge-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  color: var(--navy-950);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.trust-badge-text {
+  font-size: 12px;
+  line-height: 1.3;
+}
+.trust-badge-text strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+  color: var(--gold-bright);
+}
+
+/* ============ SECTIONS ============ */
+.section {
+  padding: 120px 0;
+  position: relative;
+}
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.section-tag::before {
+  content: '——  ';
+  opacity: 0.6;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--navy-950);
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--gold-deep);
+  font-weight: 400;
+}
+.section-subtitle {
+  font-size: 19px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  max-width: 680px;
+}
+
+/* ============ HOW IT WORKS ============ */
+.how-it-works {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: repeating-linear-gradient(to right, var(--gold-deep) 0, var(--gold-deep) 4px, transparent 4px, transparent 10px);
+  opacity: 0.4;
+  z-index: 0;
+}
+.step { position: relative; z-index: 1; }
+.step-num {
+  width: 72px;
+  height: 72px;
+  background: var(--cream);
+  border: 2px solid var(--navy-950);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--navy-950);
+  font-style: italic;
+  position: relative;
+  transition: all 0.3s;
+}
+.step:hover .step-num {
+  background: var(--navy-950);
+  color: var(--gold-bright);
+}
+.step-num::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.step:hover .step-num::before { opacity: 1; }
+.step-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--navy-950);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.step-desc {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============ CALCULATOR ============ */
+.calculator {
+  background: var(--navy-950);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+}
+.calculator .section-title { color: var(--cream); }
+.calculator .section-title em { color: var(--gold-bright); }
+.calculator .section-subtitle { color: rgba(250, 245, 236, 0.7); }
+.calculator .section-tag { color: var(--gold-bright); }
+
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-top: 64px;
+}
+.calc-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.calc-feature {
+  padding: 24px;
+  border: 1px solid rgba(201, 169, 97, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s;
+}
+.calc-feature:hover {
+  border-color: var(--gold);
+  background: rgba(201, 169, 97, 0.05);
+  transform: translateY(-4px);
+}
+.calc-feature-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--gold);
+  color: var(--navy-950);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.calc-feature h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.calc-feature p {
+  font-size: 14px;
+  color: rgba(250, 245, 236, 0.7);
+  line-height: 1.5;
+}
+
+.calc-card {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.4);
+  position: relative;
+  border: 1px solid var(--gold-deep);
+}
+.calc-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.calc-card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy-950);
+}
+.calc-card-badge {
+  padding: 4px 10px;
+  background: var(--navy-950);
+  color: var(--gold-bright);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+.calc-field { margin-bottom: 18px; }
+.calc-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.calc-field input,
+.calc-field select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 16px;
+  background: var(--cream-light);
+  color: var(--ink);
+  font-family: inherit;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.calc-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231A2F5C' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.calc-field input:focus,
+.calc-field select:focus {
+  outline: none;
+  border-color: var(--navy-700);
+  box-shadow: 0 0 0 3px rgba(42, 68, 128, 0.1);
+}
+.calc-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.calc-tip {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.calc-tip strong { color: var(--guate-green); }
+
+.calc-result {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border-radius: var(--radius);
+  display: none;
+}
+.calc-result.active { display: block; animation: slideDown 0.4s ease; }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.calc-result-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.calc-result-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.25);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.calc-result-usd {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.calc-result-gtq {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--gold-bright);
+  font-weight: 500;
+}
+.calc-result-breakdown {
+  font-size: 13px;
+  color: rgba(250, 245, 236, 0.75);
+  line-height: 1.7;
+}
+.calc-result-breakdown .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  gap: 12px;
+}
+.calc-result-breakdown .row .tax-zero {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+.calc-result-breakdown .row .tax-info {
+  color: var(--gold-bright);
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+.calc-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border: none;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+  min-height: 48px;
+}
+.calc-btn:hover {
+  background: var(--navy-800);
+  transform: translateY(-1px);
+}
+.calc-note {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 12px;
+  text-align: center;
+  line-height: 1.5;
+}
+.calc-note strong { color: var(--guate-green); }
+
+.cafta-info {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: linear-gradient(to right, rgba(74, 124, 89, 0.12), rgba(74, 124, 89, 0.04));
+  border-left: 3px solid var(--guate-green);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.cafta-info strong { color: var(--guate-green); }
+
+/* ============ PRICE BLINDADO ============ */
+.precio-blindado {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.blindado-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 56px;
+}
+.blindado-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.blindado-card {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  transition: all 0.3s;
+}
+.blindado-card:hover {
+  border-color: var(--gold);
+  transform: translateX(8px);
+  box-shadow: var(--shadow);
+}
+.blindado-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--navy-950);
+  color: var(--gold-bright);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  font-style: italic;
+}
+.blindado-card h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy-950);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.blindado-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.blindado-stamp {
+  position: sticky;
+  top: 100px;
+  text-align: center;
+  padding: 40px 32px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gold);
+  box-shadow: var(--shadow-xl);
+}
+.stamp-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 36px;
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+.stamp-seal::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--gold-deep);
+  border-radius: 50%;
+}
+.stamp-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.stamp-desc {
+  font-size: 13px;
+  color: rgba(250, 245, 236, 0.7);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.stamp-guarantee {
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 169, 97, 0.25);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============ PLANS ============ */
+.plans {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+.plans-header-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.plan {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--navy-700);
+}
+.plan-featured {
+  background: var(--navy-950);
+  color: var(--cream);
+  border-color: var(--gold);
+  transform: scale(1.03);
+}
+.plan-featured:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+.plan-featured-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--navy-950);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+.plan-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.plan-tagline {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+}
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.plan-price-main {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.plan-price-unit {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.plan-price-gtq {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  opacity: 0.65;
+  margin-bottom: 8px;
+}
+.plan-featured .plan-price-gtq { color: var(--gold-bright); opacity: 0.9; }
+.plan-membership {
+  font-size: 13px;
+  padding: 8px 12px;
+  background: rgba(42, 68, 128, 0.1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+.plan-featured .plan-membership {
+  background: rgba(201, 169, 97, 0.15);
+  color: var(--gold-bright);
+}
+.plan-features {
+  list-style: none;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.plan-features li {
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  line-height: 1.45;
+}
+.plan-features li::before {
+  content: '✓';
+  color: var(--guate-green);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.plan-featured .plan-features li::before { color: var(--gold-bright); }
+.plan-cta {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: var(--navy-950);
+  border: 1px solid var(--navy-950);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plan-cta:hover {
+  background: var(--navy-950);
+  color: var(--cream);
+}
+.plan-featured .plan-cta {
+  background: var(--gold);
+  color: var(--navy-950);
+  border-color: var(--gold);
+}
+.plan-featured .plan-cta:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+.plan-b2b {
+  margin-top: 40px;
+  padding: 36px;
+  background: var(--paper);
+  border: 1px dashed var(--gold-deep);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.plan-b2b-text h4 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy-950);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.plan-b2b-text p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 600px;
+  line-height: 1.55;
+}
+.plan-b2b-text p strong { color: var(--navy-950); }
+
+/* ============ COMPARATIVA ============ */
+.comparativa {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.compare-table-wrap {
+  margin-top: 56px;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+.compare-table th,
+.compare-table td {
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.compare-table thead th {
+  background: var(--navy-950);
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  border-bottom: 0;
+  position: sticky;
+  top: 0;
+}
+.compare-table thead th:first-child {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.compare-inex {
+  background: rgba(201, 169, 97, 0.08);
+  color: var(--navy-950);
+  font-weight: 700;
+  position: relative;
+}
+thead .compare-inex {
+  background: var(--gold);
+  color: var(--navy-950);
+}
+.compare-table tbody tr:hover {
+  background: rgba(201, 169, 97, 0.04);
+}
+.compare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.compare-feature {
+  font-weight: 600;
+  color: var(--navy-950);
+  font-size: 13px;
+}
+.check {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--guate-green);
+  color: var(--cream);
+  text-align: center;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.cross { color: var(--ink-muted); font-size: 16px; }
+
+.compare-scroll-hint {
+  display: none;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* ============ PAYMENT METHODS ============ */
+.payment {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 56px;
+}
+.pay-card {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.pay-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.pay-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--navy-950);
+  color: var(--gold-bright);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 26px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+}
+.pay-card h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-950);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.pay-card p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.pay-logos {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.pay-logo {
+  padding: 4px 10px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--navy-800);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* ============ FOUNDER STORY ============ */
+.founder {
+  background: var(--navy-950);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.founder::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.founder-portrait {
+  aspect-ratio: 4/5;
+  background: var(--navy-800);
+  border: 1px solid var(--gold-deep);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.founder-portrait::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+}
+.founder-portrait-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.founder-silhouette {
+  width: 120px;
+  height: 120px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 64px;
+  color: var(--navy-950);
+}
+.founder-badge {
+  align-self: flex-start;
+  padding: 8px 14px;
+  background: var(--gold);
+  color: var(--navy-950);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+.founder-caption {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold-bright);
+  line-height: 1.3;
+}
+.founder-caption small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(227, 193, 121, 0.7);
+  font-style: normal;
+  margin-top: 12px;
+  font-weight: 400;
+}
+.founder .section-tag { color: var(--gold-bright); }
+.founder .section-title { color: var(--cream); }
+.founder .section-title em { color: var(--gold-bright); }
+.founder-text {
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(250, 245, 236, 0.85);
+  margin-bottom: 24px;
+}
+.founder-text strong { color: var(--gold-bright); font-weight: 600; }
+.founder-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--gold-bright);
+  padding: 24px 0 24px 32px;
+  border-left: 2px solid var(--gold);
+  margin: 32px 0;
+  letter-spacing: -0.01em;
+}
+.founder-signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 32px;
+  color: var(--gold-bright);
+  font-weight: 500;
+  margin-top: 24px;
+}
+.founder-signature small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  color: rgba(250, 245, 236, 0.6);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* ============ FUNDADORES ============ */
+.fundadores {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+.fundadores-card {
+  max-width: 900px;
+  margin: 56px auto 0;
+  background: var(--cream-light);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+.fundadores-seal {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  background: var(--navy-950);
+  color: var(--gold-bright);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 28px;
+  border: 2px solid var(--gold);
+}
+.fundadores-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--navy-950);
+  margin-bottom: 16px;
+  margin-top: 12px;
+}
+.fundadores-title em {
+  font-style: italic;
+  color: var(--gold-deep);
+}
+.fundadores-subtitle {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+.fundadores-counter {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 24px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border-radius: var(--radius);
+  margin-bottom: 36px;
+}
+.counter-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  letter-spacing: -0.02em;
+}
+.counter-label {
+  font-size: 13px;
+  color: rgba(250, 245, 236, 0.8);
+}
+.fundadores-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.benefit {
+  padding: 20px 12px;
+  border-right: 1px solid var(--line);
+}
+.benefit:last-child { border-right: 0; }
+.benefit-icon {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--gold-deep);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.benefit-label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.benefit-label strong { color: var(--navy-950); }
+
+.signup-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.signup-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.signup-input {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-family: inherit;
+  background: var(--cream-light);
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.signup-input:focus {
+  outline: none;
+  border-color: var(--navy-700);
+  box-shadow: 0 0 0 3px rgba(42, 68, 128, 0.1);
+}
+.signup-btn {
+  padding: 16px;
+  background: var(--navy-950);
+  color: var(--cream);
+  border: 0;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+  min-height: 48px;
+}
+.signup-btn:hover {
+  background: var(--navy-800);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+.signup-btn:disabled {
+  background: var(--guate-green);
+  cursor: default;
+  transform: none;
+}
+.signup-note {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ============ GUARANTEES ============ */
+.guarantees {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+.guar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+.guar-card {
+  padding: 32px 28px;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s;
+}
+.guar-card:hover {
+  border-color: var(--navy-700);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.guar-number {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--gold-deep);
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.guar-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy-950);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.guar-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============ FAQ ============ */
+.faq { background: var(--paper); border-top: 1px solid var(--line); }
+.faq-list { max-width: 860px; margin: 56px auto 0; }
+.faq-item {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.faq-item[open] {
+  border-color: var(--navy-700);
+  box-shadow: var(--shadow);
+}
+.faq-item summary {
+  padding: 22px 28px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--navy-950);
+  letter-spacing: -0.01em;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-plus {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--navy-950);
+}
+.faq-item[open] .faq-plus {
+  background: var(--navy-950);
+  color: var(--gold-bright);
+  transform: rotate(45deg);
+  border-color: var(--navy-950);
+}
+.faq-answer {
+  padding: 0 28px 24px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.faq-answer p { margin-bottom: 10px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer strong { color: var(--navy-950); }
+
+/* ============ CTA FINAL ============ */
+.cta-final {
+  background: var(--navy-950);
+  color: var(--cream);
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+.cta-final-inner {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+.cta-final .section-tag { color: var(--gold-bright); }
+.cta-final h2 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+.cta-final h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+.cta-final p {
+  font-size: 19px;
+  color: rgba(250, 245, 236, 0.8);
+  line-height: 1.55;
+  margin-bottom: 40px;
+}
+.cta-final-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-final .btn-primary {
+  background: var(--gold);
+  color: var(--navy-950);
+  border-color: var(--gold);
+}
+.cta-final .btn-primary:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+.cta-final .btn-secondary {
+  color: var(--cream);
+  border-color: var(--cream);
+}
+.cta-final .btn-secondary:hover {
+  background: var(--cream);
+  color: var(--navy-950);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--navy-950);
+  color: rgba(250, 245, 236, 0.7);
+  padding: 72px 0 32px;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+}
+.footer-brand .logo-text { color: var(--cream); }
+.footer-brand .logo-text em { color: var(--gold-bright); }
+.footer-desc {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 320px;
+}
+.footer-wa {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--guate-green);
+  color: var(--cream);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.footer-wa:hover {
+  background: var(--guate-green-light);
+  transform: translateY(-2px);
+}
+.footer-col h5 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  color: rgba(250, 245, 236, 0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold-bright); }
+
+.footer-bottom {
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+}
+.footer-legal {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-legal a {
+  color: rgba(250, 245, 236, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-legal a:hover { color: var(--gold-bright); }
+
+/* ============ FLOATING WHATSAPP ============ */
+.fab-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: var(--guate-green);
+  color: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(74, 124, 89, 0.4);
+  z-index: 80;
+  transition: all 0.3s;
+  font-size: 28px;
+}
+.fab-wa:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(74, 124, 89, 0.5);
+}
+.fab-wa::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--guate-green);
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.3; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero-inner, .blindado-grid, .founder-grid, .calc-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-visual { height: 500px; }
+  .plans-grid { grid-template-columns: repeat(2, 1fr); }
+  .plan-featured { transform: none; }
+  .plan-featured:hover { transform: translateY(-6px); }
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .steps::before { display: none; }
+  .guar-grid { grid-template-columns: repeat(2, 1fr); }
+  .fundadores-benefits { grid-template-columns: repeat(2, 1fr); }
+  .benefit:nth-child(2) { border-right: 0; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .calc-features { grid-template-columns: 1fr; }
+  .plan-b2b { flex-direction: column; text-align: center; }
+  .blindado-stamp { position: static; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: flex; }
+  .section { padding: 72px 0; }
+  .hero { padding: 40px 0 64px; }
+  .hero-inner { gap: 48px; padding: 0 20px; }
+  .section-inner { padding: 0 20px; }
+  .hero-visual { height: 440px; }
+  .card-package { padding: 22px; }
+  .card-package-1 { width: 82%; max-width: 280px; right: 0; }
+  .card-package-2 { width: 75%; max-width: 250px; top: 180px; }
+  .card-package-3 { width: 78%; max-width: 265px; right: 8%; }
+  .card-title { font-size: 22px; }
+  .plans-grid { grid-template-columns: 1fr; }
+  .plan-featured { transform: none !important; }
+  .compare-scroll-hint { display: block; }
+  .trust-badges { gap: 28px; }
+  .guar-grid { grid-template-columns: 1fr; }
+  .fundadores-benefits { grid-template-columns: 1fr; }
+  .benefit { border-right: 0; border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .benefit:last-child { border-bottom: 0; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .calc-card { padding: 24px; }
+  .signup-row { grid-template-columns: 1fr; }
+  .calc-field-row { grid-template-columns: 1fr; }
+  .fundadores-card { padding: 40px 24px; }
+  .founder-quote { font-size: 20px; padding-left: 24px; }
+  .nav-inner { padding: 14px 20px; gap: 12px; }
+  .announce { font-size: 11px; padding: 8px 12px; }
+  .hero-badge { font-size: 10px; padding: 5px 12px 5px 5px; }
+  .hero-badge-dot { width: 18px; height: 18px; font-size: 10px; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .hero-subtitle { font-size: 17px; }
+  .section-title { font-size: 32px; }
+  .section-subtitle { font-size: 17px; }
+  .founder-grid { gap: 40px; }
+  .blindado-grid { gap: 40px; }
+  .blindado-card { padding: 22px; gap: 16px; }
+  .blindado-stamp { padding: 32px 24px; }
+  .fab-wa { width: 56px; height: 56px; bottom: 20px; right: 20px; font-size: 24px; }
+  .cta-final { padding: 80px 0; }
+  .cta-final-btns { flex-direction: column; }
+  .cta-final-btns .btn { width: 100%; justify-content: center; }
+  .trust-bar { padding: 32px 0; }
+  .trust-badge-text { font-size: 11px; }
+  .pay-grid { gap: 16px; }
+  .pay-card { padding: 24px 20px; }
+  .footer-wa { font-size: 13px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+  .faq-item summary { padding: 18px 20px; font-size: 16px; gap: 16px; }
+  .faq-answer { padding: 0 20px 20px; font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 44px; }
+  .section-title { font-size: 28px; }
+  .plan { padding: 28px 22px; }
+  .plan-price-main { font-size: 40px; }
+  .calc-card { padding: 20px; }
+  .calc-card-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .counter-num { font-size: 30px; }
+  .fundadores-title { font-size: 28px; }
+}
+
+/* ============ ANIMATIONS ============ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="paper-noise"></div>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">
+  🇬🇹 <strong>Únete a los 50 Fundadores</strong> · 25% de descuento de por vida + Plan Pro gratis 12 meses · Lanzamiento próximo 2026
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">i</div>
+      <div class="logo-text">iN<em>exions</em></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#cotizador">Cotizador</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#comparativa">Comparativa</a></li>
+      <li><a href="#fundador">Nuestra historia</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <a href="#fundadores" class="nav-cta">Ser Fundador →</a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Cerrar menú">×</button>
+  <a href="#como-funciona" onclick="toggleMenu()">Cómo funciona</a>
+  <a href="#cotizador" onclick="toggleMenu()">Cotizador</a>
+  <a href="#planes" onclick="toggleMenu()">Planes & Precios</a>
+  <a href="#comparativa" onclick="toggleMenu()">Comparativa</a>
+  <a href="#fundador" onclick="toggleMenu()">Nuestra historia</a>
+  <a href="#garantias" onclick="toggleMenu()">Garantías</a>
+  <a href="#faq" onclick="toggleMenu()">Preguntas frecuentes</a>
+  <a href="#fundadores" class="mobile-menu-cta" onclick="toggleMenu()">Ser Fundador →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge fade-in">
+        <span class="hero-badge-dot">🇬🇹</span>
+        Hecho en Virginia por chapines
+      </div>
+      <h1 class="fade-in fade-in-delay-1">
+        Tu casillero<br>
+        en USA.<br>
+        <em>Sin letras</em> <span class="underline">pequeñas.</span>
+      </h1>
+      <p class="hero-subtitle fade-in fade-in-delay-2">
+        Compra en <strong>Amazon, Shein, Temu, eBay</strong> o cualquier tienda de USA y recibe en Guatemala. <strong>Precios en quetzales</strong>, factura FEL, pago contra entrega. Así de simple.
+      </p>
+      <div class="hero-ctas fade-in fade-in-delay-3">
+        <a href="#fundadores" class="btn btn-primary">
+          Ser Fundador <span class="btn-arrow">→</span>
+        </a>
+        <a href="#cotizador" class="btn btn-secondary">
+          Cotizar envío
+        </a>
+      </div>
+      <div class="hero-stores fade-in fade-in-delay-4">
+        <span class="hero-stores-label">Compra donde ya compras</span>
+        <div class="hero-stores-list">
+          <span class="store">Amazon</span>
+          <span class="store">Shein</span>
+          <span class="store">Temu</span>
+          <span class="store">eBay</span>
+          <span class="store">AliExpress</span>
+          <span class="store">Apple</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="card-package card-package-1">
+        <div class="card-label">Tu paquete · En camino</div>
+        <div class="card-title">AirPods Pro<br>2da Generación</div>
+        <div class="card-subtitle">Amazon · Orden #4871902</div>
+        <div class="card-row"><span class="label">Peso</span><span class="value">0.8 lb</span></div>
+        <div class="card-row"><span class="label">DAI (CAFTA-DR)</span><span class="value">0%</span></div>
+        <div class="card-row"><span class="label">Total todo incluido</span><span class="value">Q 21.60</span></div>
+      </div>
+      <div class="card-package card-package-2">
+        <div class="card-label">Entrega a domicilio</div>
+        <div class="card-title" style="color: var(--gold-bright);">Mixco<br>Zona 7</div>
+        <div class="card-subtitle" style="color: rgba(250,245,236,0.7);">Pago contra entrega · <strong style="color: var(--gold-bright);">Q 247.50</strong></div>
+        <div class="card-row" style="border-color: rgba(201,169,97,0.2);"><span class="label">Horario</span><span class="value" style="color: var(--gold-bright);">Mañana 9-12</span></div>
+        <div class="card-row" style="border-color: rgba(201,169,97,0.2);"><span class="label">Confirmación</span><span class="value">Por WhatsApp</span></div>
+      </div>
+      <div class="card-package card-package-3">
+        <div class="card-label" style="color: rgba(10,22,40,0.7);">Factura FEL · SAT</div>
+        <div class="card-title">Q 247.35</div>
+        <div class="card-subtitle" style="color: rgba(10,22,40,0.7);">Total con IVA · Válida para deducir</div>
+        <div class="card-row" style="border-color: rgba(10,22,40,0.15);"><span class="label">Pago contra entrega</span><span class="value">✓ Disponible</span></div>
+        <div class="card-row" style="border-color: rgba(10,22,40,0.15);"><span class="label">Visa · MC · Banrural</span><span class="value">Todo aceptado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-label">Respaldados por las instituciones que importan en Guatemala</div>
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <div class="trust-badge-icon">SAT</div>
+        <div class="trust-badge-text"><strong>SAT</strong>Facturación FEL<br>Guatemala</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">CCG</div>
+        <div class="trust-badge-text"><strong>Cámara de Comercio</strong>Guatemala<br>Miembro afiliado</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">TSA</div>
+        <div class="trust-badge-text"><strong>TSA</strong>Homeland Security<br>Autorizado USA</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">IAC</div>
+        <div class="trust-badge-text"><strong>IAC</strong>Indirect Air Carrier<br>FAA Licensed</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">SSL</div>
+        <div class="trust-badge-text"><strong>SSL 256-bit</strong>Encriptación de<br>grado empresarial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-it-works" id="como-funciona">
+  <div class="section-inner">
+    <div class="section-tag">Proceso simple</div>
+    <h2 class="section-title">Cómo funciona, <em>de verdad</em>.</h2>
+    <p class="section-subtitle">En 4 pasos simples, tus compras viajan desde USA hasta tu puerta en Guatemala. Con notificaciones honestas y tracking real, no promesas vacías.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Abre tu casillero</h3>
+        <p class="step-desc">Registro en 60 segundos. Recibes tu dirección única en Virginia, cerca del aeropuerto de Washington (IAD).</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Compra en USA</h3>
+        <p class="step-desc">Usa tu dirección en Amazon, Shein, Temu, Apple o cualquier tienda. Envía la factura por WhatsApp para pre-alerta.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Te mantenemos avisado</h3>
+        <p class="step-desc">WhatsApp notifica cuando llega a VA, cuando sale a Miami, cuando cruza aduanas, y cuando llega a Guate. Todo transparente.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Recibes en tu puerta</h3>
+        <p class="step-desc">Entrega a domicilio en tu zona con pago contra entrega disponible. Área metropolitana e interior del país.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section calculator" id="cotizador">
+  <div class="section-inner">
+    <div class="section-tag">Cotizador en vivo</div>
+    <h2 class="section-title">Calcula tu envío <em>en quetzales</em>.</h2>
+    <p class="section-subtitle">Transparencia total desde el primer clic. Cálculo real de impuestos SAT con tasas verificadas por categoría de producto. Lo que ves aquí es lo que pagas.</p>
+    <div class="calc-layout">
+      <div class="calc-features">
+        <div class="calc-feature">
+          <div class="calc-feature-icon">⚖</div>
+          <h4>Cero peso volumétrico</h4>
+          <p>Pagas solo por el peso real. Sin recargos por tamaño de caja como hacen los competidores.</p>
+        </div>
+        <div class="calc-feature">
+          <div class="calc-feature-icon">🔒</div>
+          <h4>Precio blindado</h4>
+          <p>Si aduanas cobra más de lo estimado, nosotros absorbemos la diferencia. Garantizado por escrito.</p>
+        </div>
+        <div class="calc-feature">
+          <div class="calc-feature-icon">Q</div>
+          <h4>Precios en quetzales</h4>
+          <p>Tipo de cambio Banguat actualizado diariamente. Tu presupuesto en tu moneda.</p>
+        </div>
+        <div class="calc-feature">
+          <div class="calc-feature-icon">★</div>
+          <h4>Beneficio CAFTA-DR</h4>
+          <p>Por el tratado USA-Guatemala, muchos productos tienen DAI reducido o cero. Te lo aplicamos automáticamente.</p>
+        </div>
+      </div>
+      <div class="calc-card">
+        <div class="calc-card-header">
+          <div class="calc-card-title">Calculadora SAT</div>
+          <div class="calc-card-badge">En vivo</div>
+        </div>
+
+        <div class="calc-field">
+          <label for="categoria">Categoría del producto</label>
+          <select id="categoria" onchange="calcular()">
+            <optgroup label="Electrónicos & tecnología (DAI 0%)">
+              <option value="electronics_0">Computadoras, laptops, tablets</option>
+              <option value="phones_0">Teléfonos celulares y accesorios</option>
+              <option value="medical_0">Equipo médico, insumos</option>
+              <option value="books_0">Libros, revistas, material educativo</option>
+            </optgroup>
+            <optgroup label="DAI 5%">
+              <option value="contacts_5">Lentes de contacto y graduados</option>
+              <option value="parts_5">Componentes y repuestos especiales</option>
+            </optgroup>
+            <optgroup label="DAI 10%">
+              <option value="tools_10">Herramientas, repuestos automotrices</option>
+              <option value="lighting_10">Iluminación, linternas, baterías</option>
+            </optgroup>
+            <optgroup label="DAI 15% (productos comunes)">
+              <option value="shein_15" selected>Ropa, zapatos (Shein, Zara, etc.)</option>
+              <option value="beauty_15">Cosméticos, perfumería, belleza</option>
+              <option value="accessories_15">Bolsos, carteras, maletas, relojes</option>
+              <option value="sports_15">Artículos deportivos, gym</option>
+              <option value="toys_15">Juguetes, videojuegos</option>
+              <option value="appliances_15">Electrodomésticos pequeños</option>
+              <option value="home_15">Hogar, decoración, muebles pequeños</option>
+            </optgroup>
+          </select>
+          <div class="calc-tip" id="categoria-tip">
+            <strong>Ropa & calzado:</strong> paga DAI 15% + IVA 12%. Categoría estándar para compras de Shein, Temu, etc.
+          </div>
+        </div>
+
+        <div class="calc-field-row">
+          <div class="calc-field">
+            <label for="peso">Peso (libras)</label>
+            <input type="number" id="peso" value="3" min="0.1" step="0.1" inputmode="decimal" onchange="calcular()">
+          </div>
+          <div class="calc-field">
+            <label for="valor">Valor producto (USD)</label>
+            <input type="number" id="valor" value="100" min="1" step="1" inputmode="decimal" onchange="calcular()">
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label for="plan">Tu plan iNexions</label>
+          <select id="plan" onchange="calcular()">
+            <option value="free">Free — $3.19/lb + handling</option>
+            <option value="smart">Smart — $2.95/lb todo incluido</option>
+            <option value="pro" selected>Pro — $2.65/lb todo incluido</option>
+            <option value="elite">Elite — $2.25/lb todo incluido</option>
+          </select>
+        </div>
+
+        <button class="calc-btn" onclick="calcular()">Calcular mi envío</button>
+
+        <div class="calc-result active" id="calc-result">
+          <div class="calc-result-label">Tu precio final todo incluido</div>
+          <div class="calc-result-main">
+            <div class="calc-result-usd" id="result-usd">$0.00</div>
+            <div class="calc-result-gtq" id="result-gtq">Q 0.00</div>
+          </div>
+          <div class="calc-result-breakdown" id="breakdown"></div>
+        </div>
+
+        <div class="cafta-info" id="cafta-box" style="display:none;">
+          <strong>✓ Ahorro CAFTA-DR:</strong> Este producto califica para arancel preferencial por el Tratado de Libre Comercio USA-Guatemala. Te ahorras el DAI completo.
+        </div>
+
+        <p class="calc-note">
+          <strong>✓ Precio blindado:</strong> Si SAT liquida diferente, iNexions absorbe la diferencia de su bolsillo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO BLINDADO -->
+<section class="section precio-blindado">
+  <div class="section-inner">
+    <div class="section-tag">Garantía de precio</div>
+    <h2 class="section-title">Precio Blindado. <em>Lo que cotizas, pagas.</em></h2>
+    <p class="section-subtitle">Porque si te decimos un precio, ese es tu precio. Punto. Si la aduana cobra más, el costo es nuestro — no tuyo.</p>
+    <div class="blindado-grid">
+      <div class="blindado-cards">
+        <div class="blindado-card">
+          <div class="blindado-icon">A</div>
+          <div>
+            <h4>Sin cobros sorpresa</h4>
+            <p>El precio que cotizas es tu precio final. Nada de cargos "descubiertos" cuando tu paquete llega. Esto nos diferencia de la competencia.</p>
+          </div>
+        </div>
+        <div class="blindado-card">
+          <div class="blindado-icon">B</div>
+          <div>
+            <h4>Diferencia absorbida</h4>
+            <p>Si SAT liquida impuestos superiores a nuestra estimación, iNexions cubre la diferencia completa. Tú pagas lo cotizado, no más.</p>
+          </div>
+        </div>
+        <div class="blindado-card">
+          <div class="blindado-icon">C</div>
+          <div>
+            <h4>DUCA documentado</h4>
+            <p>Recibes el Documento Único Centroamericano con cada despacho, con el desglose exacto de cada cargo. Transparencia total.</p>
+          </div>
+        </div>
+        <div class="blindado-card">
+          <div class="blindado-icon">D</div>
+          <div>
+            <h4>Garantía de 30 días</h4>
+            <p>Si no estás 100% conforme con tu primer envío, te reembolsamos el flete completo. Sin preguntas, sin trámites, sin drama.</p>
+          </div>
+        </div>
+      </div>
+      <div class="blindado-stamp">
+        <div class="stamp-seal">✓</div>
+        <div class="stamp-title">Garantía iNexions</div>
+        <div class="stamp-desc">30 días de garantía total. Si no estás conforme, te devolvemos el 100% del flete. Sin excepciones.</div>
+        <div class="stamp-guarantee">Válido para cada envío · Sin letra pequeña</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="section plans" id="planes">
+  <div class="section-inner">
+    <div class="plans-header-row">
+      <div>
+        <div class="section-tag">Planes & precios</div>
+        <h2 class="section-title">Elige tu plan <em>ideal</em>.</h2>
+      </div>
+      <p class="section-subtitle" style="max-width: 420px;">Todos los planes incluyen casillero gratis. Paga menos por libra mientras más envíes. Cancela cuando quieras.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan">
+        <div class="plan-name">Free</div>
+        <div class="plan-tagline">Perfecto para probar el servicio</div>
+        <div class="plan-price"><span class="plan-price-main">$3.19</span><span class="plan-price-unit">/lb</span></div>
+        <div class="plan-price-gtq">≈ Q 24.70 / libra</div>
+        <div class="plan-membership">Sin cuota · Handling $2.50/paquete</div>
+        <ul class="plan-features">
+          <li>3 libras GRATIS de bienvenida</li>
+          <li>Casillero virtual en Virginia</li>
+          <li>Tracking en WhatsApp</li>
+          <li>Seguro básico hasta $100</li>
+          <li>Entrega a domicilio Guatemala</li>
+          <li>Pago en quetzales</li>
+        </ul>
+        <a href="#fundadores" class="plan-cta">Empezar gratis</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name">Smart</div>
+        <div class="plan-tagline">Para el comprador casual</div>
+        <div class="plan-price"><span class="plan-price-main">$2.95</span><span class="plan-price-unit">/lb</span></div>
+        <div class="plan-price-gtq">≈ Q 22.85 / libra</div>
+        <div class="plan-membership">Q 115 / trimestre · Todo incluido</div>
+        <ul class="plan-features">
+          <li>Todo del plan Free</li>
+          <li><strong>Handling INCLUIDO</strong> (ahorras $2.50/paq)</li>
+          <li>Entrega a domicilio gratis (2 paq/mes)</li>
+          <li>Seguro hasta $200</li>
+          <li>iNexPoints 1x por libra</li>
+          <li>Soporte prioritario WhatsApp</li>
+        </ul>
+        <a href="#fundadores" class="plan-cta">Elegir Smart</a>
+      </div>
+      <div class="plan plan-featured">
+        <div class="plan-featured-badge">Más popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-tagline">El favorito de los chapines</div>
+        <div class="plan-price"><span class="plan-price-main">$2.65</span><span class="plan-price-unit">/lb</span></div>
+        <div class="plan-price-gtq">≈ Q 20.55 / libra</div>
+        <div class="plan-membership">Q 310 / semestre · Todo incluido</div>
+        <ul class="plan-features">
+          <li>Todo del plan Smart</li>
+          <li>Domicilio GRATIS metro (4 paq/mes)</li>
+          <li>Prioridad de despacho</li>
+          <li>Seguro hasta $300</li>
+          <li>Cashback 2% mensual</li>
+          <li>iNexPoints 1.5x por libra</li>
+          <li>Devolución gratis semestral</li>
+        </ul>
+        <a href="#fundadores" class="plan-cta">Elegir Pro</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name">Elite</div>
+        <div class="plan-tagline">Para el comprador frecuente</div>
+        <div class="plan-price"><span class="plan-price-main">$2.25</span><span class="plan-price-unit">/lb</span></div>
+        <div class="plan-price-gtq">≈ Q 17.45 / libra</div>
+        <div class="plan-membership">Q 1,150 / año · Todo incluido</div>
+        <ul class="plan-features">
+          <li>Todo del plan Pro</li>
+          <li>Tarifa más baja posible</li>
+          <li>Domicilio GRATIS (8 paq/mes)</li>
+          <li>Personal Shopper (2/año)</li>
+          <li>Seguro hasta $500</li>
+          <li>Cashback 3% mensual</li>
+          <li>Devoluciones (3 gratis/año)</li>
+          <li>iNexPoints 2x por libra</li>
+        </ul>
+        <a href="#fundadores" class="plan-cta">Elegir Elite</a>
+      </div>
+    </div>
+    <div class="plan-b2b">
+      <div class="plan-b2b-text">
+        <h4>Plan Empresarial <em style="color: var(--gold-deep); font-style: italic;">B2B</em></h4>
+        <p>Tarifas desde <strong>$1.75/libra</strong> para empresas con volumen 50+ lbs mensuales. Cuenta dedicada, API de integración, facturación FEL consolidada y soporte prioritario. Ideal para emprendedores que venden productos de importación.</p>
+      </div>
+      <a href="#" class="btn btn-primary">Cotizar plan B2B</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section class="section comparativa" id="comparativa">
+  <div class="section-inner">
+    <div class="section-tag">Comparativa transparente</div>
+    <h2 class="section-title">Por qué <em>elegirnos</em>.</h2>
+    <p class="section-subtitle">Los números hablan más fuerte que el marketing. Comparamos lado a lado con las principales opciones del mercado guatemalteco.</p>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th class="compare-inex">iNexions</th>
+            <th>CPX</th>
+            <th>Quick Box</th>
+            <th>Aeropost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="compare-feature">Precio base por libra</td><td class="compare-inex">$3.19</td><td>$3.10 – $3.70</td><td>$2.50 – $2.75</td><td>$3.70 – $5.95</td></tr>
+          <tr><td class="compare-feature">Mejor tarifa (membresía)</td><td class="compare-inex">$2.25 (Elite)</td><td>$2.90 (prepago)</td><td>$2.25 (anual)</td><td>$2.99 (>35 lb)</td></tr>
+          <tr><td class="compare-feature">Handling por paquete</td><td class="compare-inex">$0 (en Smart+)</td><td>Varía (oculto)</td><td>$5.00</td><td>$20.00</td></tr>
+          <tr><td class="compare-feature">Peso volumétrico</td><td class="compare-inex">No cobramos</td><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+          <tr><td class="compare-feature">Transparencia aduanal</td><td class="compare-inex">Precio Blindado</td><td>Parcial</td><td>Buena</td><td>Opaca</td></tr>
+          <tr><td class="compare-feature">Pago contra entrega</td><td class="compare-inex"><span class="check">✓</span></td><td><span class="cross">×</span></td><td><span class="cross">×</span></td><td><span class="cross">×</span></td></tr>
+          <tr><td class="compare-feature">Facturación FEL Guatemala</td><td class="compare-inex"><span class="check">✓</span></td><td>Parcial</td><td>Parcial</td><td><span class="cross">×</span></td></tr>
+          <tr><td class="compare-feature">Precios en quetzales</td><td class="compare-inex"><span class="check">✓</span></td><td><span class="cross">×</span></td><td><span class="cross">×</span></td><td><span class="cross">×</span></td></tr>
+          <tr><td class="compare-feature">Seguro incluido</td><td class="compare-inex">Hasta $500</td><td>Hasta $200</td><td>Hasta $200</td><td>Desde $1.99</td></tr>
+          <tr><td class="compare-feature">Beneficio CAFTA-DR</td><td class="compare-inex">Aplicado auto</td><td><span class="cross">×</span></td><td>Parcial</td><td><span class="cross">×</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-scroll-hint">← desliza para ver más columnas →</p>
+  </div>
+</section>
+
+<!-- PAYMENT METHODS -->
+<section class="section payment">
+  <div class="section-inner">
+    <div class="section-tag">Métodos de pago</div>
+    <h2 class="section-title">Paga <em>como te quede mejor</em>.</h2>
+    <p class="section-subtitle">Tarjeta de USA, tarjeta chapina, depósito, o efectivo contra entrega. Aceptamos los métodos de pago que realmente usa el guatemalteco.</p>
+    <div class="pay-grid">
+      <div class="pay-card">
+        <div class="pay-icon">Q</div>
+        <h4>Pago contra entrega</h4>
+        <p>Recibe tu paquete, luego pagas en efectivo. Disponible en área metropolitana.</p>
+      </div>
+      <div class="pay-card">
+        <div class="pay-icon">💳</div>
+        <h4>Tarjetas locales</h4>
+        <p>Todas las tarjetas emitidas en Guatemala, cuotas disponibles.</p>
+        <div class="pay-logos"><span class="pay-logo">VISA</span><span class="pay-logo">MASTERCARD</span><span class="pay-logo">AMEX</span></div>
+      </div>
+      <div class="pay-card">
+        <div class="pay-icon">🏦</div>
+        <h4>Depósito / Transferencia</h4>
+        <p>Paga por depósito en nuestras cuentas bancarias guatemaltecas.</p>
+        <div class="pay-logos"><span class="pay-logo">BAM</span><span class="pay-logo">BI</span><span class="pay-logo">BANRURAL</span></div>
+      </div>
+      <div class="pay-card">
+        <div class="pay-icon">$</div>
+        <h4>Tarjeta internacional</h4>
+        <p>Paga con tu tarjeta de USA vía Stripe, procesamiento seguro.</p>
+        <div class="pay-logos"><span class="pay-logo">STRIPE</span><span class="pay-logo">PAYPAL</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER STORY -->
+<section class="section founder" id="fundador">
+  <div class="section-inner">
+    <div class="founder-grid">
+      <div class="founder-portrait">
+        <div class="founder-portrait-content">
+          <div class="founder-badge">🇬🇹 Fundador</div>
+          <div class="founder-silhouette">I</div>
+          <div class="founder-caption">"Construí iNexions porque yo mismo sufrí los couriers opacos."<small>Inmer · Fundador & CEO</small></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag">Nuestra historia</div>
+        <h2 class="section-title">Hola, soy <em>Inmer</em>.</h2>
+        <p class="founder-text">Como tú, soy <strong>guatemalteco</strong>. Desde hace años vivo en Virginia y como cualquier chapín que vive en USA, mis familiares me mandan mensaje cada semana: <em>"mandame esto de Amazon"</em>, <em>"pedí algo de Shein, traémelo cuando vengas"</em>.</p>
+        <p class="founder-text">Durante años usé los couriers tradicionales. Y durante años pagué precios opacos, sufrí "handlings" que nadie me explicaba, y esperé respuestas que nunca llegaron cuando algo fallaba.</p>
+        <div class="founder-quote">"Un día dije: si nadie va a construir el courier que los chapines merecemos, lo construyo yo."</div>
+        <p class="founder-text">iNexions nació de esa frustración. Y de una promesa simple: <strong>tu paquete llega como si fuera mío</strong>. Con tracking real, precios claros, y alguien que te responde cuando llamas.</p>
+        <div class="founder-signature">Inmer García<small>Fundador & CEO · iNexions Logistics</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDADORES -->
+<section class="section fundadores" id="fundadores">
+  <div class="section-inner">
+    <div class="fundadores-card">
+      <div class="fundadores-seal">50</div>
+      <h2 class="fundadores-title">Sé uno de los <em>50 Fundadores</em></h2>
+      <p class="fundadores-subtitle">Los primeros 50 guatemaltecos que se unan reciben beneficios exclusivos <strong>de por vida</strong>. Una sola oportunidad, nunca se repite.</p>
+      <div class="fundadores-counter">
+        <span class="counter-num" id="founder-count">37</span>
+        <span class="counter-label">lugares disponibles · quedan pocos</span>
+      </div>
+      <div class="fundadores-benefits">
+        <div class="benefit"><div class="benefit-icon">25%</div><div class="benefit-label"><strong>Descuento<br>de por vida</strong></div></div>
+        <div class="benefit"><div class="benefit-icon">Pro</div><div class="benefit-label"><strong>Plan Pro GRATIS<br>12 meses</strong></div></div>
+        <div class="benefit"><div class="benefit-icon">5 lb</div><div class="benefit-label"><strong>Envío GRATIS<br>al lanzamiento</strong></div></div>
+        <div class="benefit"><div class="benefit-icon">#1</div><div class="benefit-label"><strong>Badge Fundador<br>permanente</strong></div></div>
+      </div>
+      <form class="signup-form" onsubmit="submitFounder(event)">
+        <div class="signup-row">
+          <input type="text" class="signup-input" placeholder="Tu nombre" required>
+          <input type="tel" class="signup-input" placeholder="WhatsApp (+502)" required>
+        </div>
+        <input type="email" class="signup-input" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="signup-btn">Reservar mi lugar de Fundador →</button>
+        <p class="signup-note">Sin compromiso · Cancela cuando quieras · Protegemos tus datos con encriptación SSL</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="section guarantees" id="garantias">
+  <div class="section-inner">
+    <div class="section-tag">Garantías absolutas</div>
+    <h2 class="section-title">Tu tranquilidad es <em>nuestra obsesión</em>.</h2>
+    <p class="section-subtitle">Cada paquete respaldado por garantías reales. No letra pequeña. No "términos y condiciones aplican". Solo promesas que cumplimos.</p>
+    <div class="guar-grid">
+      <div class="guar-card"><div class="guar-number">I</div><h4 class="guar-title">Garantía de devolución</h4><p class="guar-desc">30 días para devolver tu primer envío sin preguntas. Si no te enamoras del servicio, te reembolsamos el 100% del flete.</p></div>
+      <div class="guar-card"><div class="guar-number">II</div><h4 class="guar-title">Seguro incluido</h4><p class="guar-desc">Todos los envíos incluyen seguro sin costo adicional. Planes Elite protegen hasta $500 USD por paquete.</p></div>
+      <div class="guar-card"><div class="guar-number">III</div><h4 class="guar-title">Respuesta en 24 horas</h4><p class="guar-desc">Cualquier incidencia se escucha y atiende en máximo 24 horas. Sin burocracia, sin bots, con persona real.</p></div>
+      <div class="guar-card"><div class="guar-number">IV</div><h4 class="guar-title">Foto de entrega</h4><p class="guar-desc">Cada entrega incluye prueba fotográfica con geolocalización. Sabes exactamente dónde y cuándo llegó.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <div class="section-tag">Preguntas frecuentes</div>
+    <h2 class="section-title">Las dudas <em>que todos tienen</em>.</h2>
+    <p class="section-subtitle">Respondemos con honestidad. Si tienes una pregunta que no está aquí, escríbenos por WhatsApp.</p>
+    <div class="faq-list">
+      <details class="faq-item"><summary>¿Cómo abro mi casillero? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Registrarte toma menos de 60 segundos. Llenas un formulario básico con tu nombre, email, y número de WhatsApp. Recibes inmediatamente tu dirección única en Virginia, USA.</p><p>Esa dirección es la que usarás cuando compres en Amazon, Shein, Temu, eBay, Apple o cualquier tienda estadounidense. No hay cobro por abrir el casillero — es completamente gratis.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Cuánto tiempo tarda la entrega? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Somos <strong>honestos</strong> con los tiempos: desde que llega a nuestra bodega en Virginia hasta que está en tu puerta en Guatemala toma típicamente <strong>10 a 15 días hábiles</strong>.</p><p>Ese tiempo incluye: consolidación semanal Virginia → Miami (2 días), vuelo Miami → Guatemala, desaduanaje en SAT (1-2 días), y entrega final. No prometemos lo que no podemos cumplir.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Cómo calculan los impuestos de aduana? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Usamos la <strong>fórmula oficial de SAT Guatemala</strong> sobre base CIF (Costo + Seguro + Flete internacional):</p><p>· <strong>DAI:</strong> varía entre 0% y 15% según categoría del producto<br>· <strong>IVA:</strong> 12% sobre (CIF + DAI)</p><p>Para productos originarios de USA con tratado CAFTA-DR, muchos tienen DAI reducido o cero. Nuestra calculadora te muestra el cálculo exacto antes de comprar.</p><p><strong>Importante:</strong> si SAT cobra diferente a nuestra estimación, iNexions absorbe la diferencia completa. Tú pagas lo cotizado.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Qué productos tienen DAI 0% con CAFTA-DR? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>El Tratado de Libre Comercio entre USA y Guatemala (CAFTA-DR) otorga <strong>arancel cero</strong> a muchos productos de origen estadounidense. Los más comunes:</p><p>· Computadoras, laptops, tablets<br>· Teléfonos celulares y accesorios<br>· Equipo médico e insumos<br>· Libros y material educativo<br>· Equipo científico</p><p>Estos productos solo pagan el IVA del 12% sobre el valor CIF. Te ahorras hasta el 15% que pagarías normalmente.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Qué es el peso volumétrico y por qué no lo cobran? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>El peso volumétrico es una fórmula (largo × ancho × alto / factor) que aplican otros couriers para cobrarte más por paquetes "grandes pero livianos". Por ejemplo, una almohada de 2 libras te pueden cobrar como 8 libras.</p><p>En iNexions pagas <strong>solo el peso real</strong> de tu paquete en la balanza. Así de simple.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Puedo pagar contra entrega? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Sí. Para el área metropolitana de Guatemala (Ciudad Capital, Mixco, Villa Nueva, Antigua), el pago contra entrega está disponible. Recibes tu paquete, lo inspeccionas, y pagas al mensajero en efectivo o con tarjeta.</p><p>También aceptamos tarjetas emitidas en Guatemala (Visa, Mastercard, AmEx), depósitos bancarios (BAM, BI, Banrural), y tarjetas internacionales vía Stripe.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Emiten factura FEL? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Sí. Emitimos <strong>Factura Electrónica en Línea (FEL)</strong> con el régimen de SAT Guatemala. Puedes usarla para deducir en tu declaración de ISR si eres profesional independiente, o para tu contabilidad empresarial si eres emprendedor.</p><p>La factura incluye tu NIT, tu nombre o razón social, y el desglose de servicios prestados. Se envía automáticamente por email al completarse tu pedido.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Qué pasa si mi paquete se daña o se pierde? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Todos nuestros envíos tienen seguro incluido. En el plan Free cubrimos hasta $100, Smart hasta $200, Pro hasta $300, y Elite hasta $500 USD por paquete.</p><p>Si algo sale mal, tienes nuestra garantía de <strong>respuesta en 24 horas</strong>. No bots, no filas — hablas con una persona real que resuelve tu caso, no que te marea.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Cómo funciona el programa de Fundadores? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Los primeros 50 guatemaltecos que se registren antes del lanzamiento oficial reciben beneficios permanentes:</p><p>· <strong>25% de descuento de por vida</strong> en todos los envíos<br>· <strong>Plan Pro GRATIS</strong> por 12 meses completos<br>· <strong>5 libras de envío GRATIS</strong> al lanzamiento oficial<br>· <strong>Badge Fundador</strong> permanente en tu perfil<br>· <strong>Acceso prioritario</strong> a todas las promociones futuras</p><p>Estos beneficios son irrepetibles. Después de los primeros 50, el programa se cierra permanentemente.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿En qué se diferencian de Guatemala Digital / Kemik / Pacifiko? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>Somos <strong>servicios distintos, para necesidades distintas</strong>. Guatemala Digital, Kemik y Pacifiko son e-commerce locales con catálogos curados — perfectos para productos comunes que compras en cantidad.</p><p>iNexions es para el cliente que quiere <strong>comprar DONDE QUIERA en USA</strong>: Amazon con todas sus variantes, Shein con miles de prendas, productos específicos que no están en catálogos locales. Variedad infinita + transparencia total.</p></div>
+      </details>
+      <details class="faq-item"><summary>¿Desde cuándo operan? <span class="faq-plus">+</span></summary>
+        <div class="faq-answer"><p>iNexions lanza operaciones oficialmente en 2026. Estamos en fase de pre-lanzamiento, construyendo nuestra infraestructura en Virginia, USA y Guatemala.</p><p>Somos una empresa nueva y lo decimos con orgullo. Somos transparentes en que estamos construyendo — y lo estamos haciendo bien desde el día uno, con proveedores de primera (Crowley Logistics, Amerijet, American Linehaul) y certificaciones reales (TSA IAC, SAT, Cámara de Comercio).</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <div class="section-tag">Listo para empezar</div>
+    <h2>Tu próximo paquete<br><em>sin drama</em>.</h2>
+    <p>Únete a los 50 Fundadores y empieza a recibir como debe ser: transparente, rápido, chapín.</p>
+    <div class="cta-final-btns">
+      <a href="#fundadores" class="btn btn-primary">Ser Fundador <span class="btn-arrow">→</span></a>
+      <a href="https://wa.me/50250000000" class="btn btn-secondary">Hablar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark">i</div>
+          <div class="logo-text">iN<em>exions</em></div>
+        </a>
+        <p class="footer-desc">Logística inteligente desde Virginia, USA hacia Guatemala 🇬🇹. Tecnología, transparencia y corazón chapín.</p>
+        <a href="https://wa.me/50250000000" class="footer-wa"><span>💬</span> WhatsApp +502 0000-0000</a>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#">Rastrear paquete</a></li>
+          <li><a href="#">Plan B2B</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#fundador">Nuestra historia</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Prensa</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Garantías</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 iNexions Logistics · Virginia, USA · Hecho con 🇬🇹 corazón chapín</div>
+      <div class="footer-legal">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/50250000000" class="fab-wa" aria-label="WhatsApp">💬</a>
+
+<script>
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+  document.getElementById('mobileOverlay').classList.toggle('active');
+  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('active') ? 'hidden' : '';
+}
+
+// =========================================
+// SAT-compliant tax calculator with CAFTA-DR
+// =========================================
+const categorias = {
+  // DAI 0% - CAFTA-DR beneficiarios
+  'electronics_0': { dai: 0, caftaDR: true, nombre: 'Electrónicos', tip: '<strong>✓ CAFTA-DR:</strong> DAI 0% por tratado USA-Guatemala. Solo pagas IVA 12%. ¡Gran ahorro!' },
+  'phones_0': { dai: 0, caftaDR: true, nombre: 'Celulares', tip: '<strong>✓ CAFTA-DR:</strong> DAI 0% por tratado USA-Guatemala. Solo pagas IVA 12% sobre CIF.' },
+  'medical_0': { dai: 0, caftaDR: true, nombre: 'Equipo médico', tip: '<strong>✓ CAFTA-DR:</strong> DAI 0% para equipo médico. Solo IVA 12%.' },
+  'books_0': { dai: 0, caftaDR: true, nombre: 'Libros', tip: '<strong>✓ Exento:</strong> Libros y material educativo: DAI 0% + IVA 12%.' },
+
+  // DAI 5%
+  'contacts_5': { dai: 5, caftaDR: false, nombre: 'Lentes de contacto', tip: '<strong>DAI 5%:</strong> Lentes de contacto y graduados pagan 5% sobre CIF + IVA 12%.' },
+  'parts_5': { dai: 5, caftaDR: false, nombre: 'Componentes', tip: '<strong>DAI 5%:</strong> Componentes y repuestos especiales pagan 5% + IVA 12%.' },
+
+  // DAI 10%
+  'tools_10': { dai: 10, caftaDR: false, nombre: 'Herramientas', tip: '<strong>DAI 10%:</strong> Herramientas y repuestos automotrices pagan 10% + IVA 12%.' },
+  'lighting_10': { dai: 10, caftaDR: false, nombre: 'Iluminación', tip: '<strong>DAI 10%:</strong> Iluminación, linternas, baterías pagan 10% + IVA 12%.' },
+
+  // DAI 15% - productos más comunes (Shein, Temu, etc.)
+  'shein_15': { dai: 15, caftaDR: false, nombre: 'Ropa y calzado', tip: '<strong>Ropa & calzado:</strong> paga DAI 15% + IVA 12%. Categoría estándar para compras de Shein, Temu, etc.' },
+  'beauty_15': { dai: 15, caftaDR: false, nombre: 'Cosméticos', tip: '<strong>DAI 15%:</strong> Cosméticos, perfumería y productos de belleza pagan 15% + IVA 12%.' },
+  'accessories_15': { dai: 15, caftaDR: false, nombre: 'Accesorios', tip: '<strong>DAI 15%:</strong> Bolsos, carteras, maletas, relojes pagan 15% + IVA 12%.' },
+  'sports_15': { dai: 15, caftaDR: false, nombre: 'Deportes', tip: '<strong>DAI 15%:</strong> Artículos deportivos y de gym pagan 15% + IVA 12%.' },
+  'toys_15': { dai: 15, caftaDR: false, nombre: 'Juguetes', tip: '<strong>DAI 15%:</strong> Juguetes y videojuegos pagan 15% + IVA 12%.' },
+  'appliances_15': { dai: 15, caftaDR: false, nombre: 'Electrodomésticos', tip: '<strong>DAI 15%:</strong> Electrodomésticos pequeños pagan 15% + IVA 12%.' },
+  'home_15': { dai: 15, caftaDR: false, nombre: 'Hogar', tip: '<strong>DAI 15%:</strong> Hogar, decoración y muebles pequeños pagan 15% + IVA 12%.' }
+};
+
+const tarifasPlan = {
+  'free':  { lb: 3.19, handling: 2.50, name: 'Free' },
+  'smart': { lb: 2.95, handling: 0,    name: 'Smart' },
+  'pro':   { lb: 2.65, handling: 0,    name: 'Pro' },
+  'elite': { lb: 2.25, handling: 0,    name: 'Elite' }
+};
+
+const TIPO_CAMBIO = 7.75; // GTQ por USD (Banguat)
+const FACTOR_SEGURO = 0.022; // 2.2% aéreo según SAT
+
+function calcular() {
+  const peso = parseFloat(document.getElementById('peso').value) || 0;
+  const valor = parseFloat(document.getElementById('valor').value) || 0;
+  const planKey = document.getElementById('plan').value;
+  const catKey = document.getElementById('categoria').value;
+
+  const categoria = categorias[catKey];
+  const tarifa = tarifasPlan[planKey];
+
+  // Update category tip
+  document.getElementById('categoria-tip').innerHTML = categoria.tip;
+
+  // Show CAFTA-DR info box if applicable
+  document.getElementById('cafta-box').style.display = categoria.caftaDR ? 'block' : 'none';
+
+  // 1. FLETE INTERNACIONAL (iNexions)
+  const flete = peso * tarifa.lb;
+  const handling = tarifa.handling;
+
+  // 2. CIF CALCULATION (Costo + Seguro + Flete)
+  const seguro = valor * FACTOR_SEGURO; // 2.2% aéreo según SAT
+  const cif = valor + flete + seguro;
+
+  // 3. DAI (Derecho Arancelario a la Importación)
+  const daiRate = categoria.dai / 100;
+  const dai = cif * daiRate;
+
+  // 4. IVA (12% sobre CIF + DAI)
+  const iva = (cif + dai) * 0.12;
+
+  // 5. TOTALES
+  const totalImpuestos = dai + iva;
+  const totalServicio = flete + handling;
+  const totalFinal = totalServicio + totalImpuestos;
+  const totalGtq = totalFinal * TIPO_CAMBIO;
+
+  // Update display
+  document.getElementById('result-usd').textContent = '$' + totalFinal.toFixed(2);
+  document.getElementById('result-gtq').textContent = 'Q ' + totalGtq.toFixed(2);
+
+  // Build breakdown
+  let breakdown = '';
+  breakdown += `<div class="row"><span>Flete (${peso} lb × $${tarifa.lb.toFixed(2)})</span><span>$${flete.toFixed(2)}</span></div>`;
+
+  if (handling > 0) {
+    breakdown += `<div class="row"><span>Handling (plan Free)</span><span>$${handling.toFixed(2)}</span></div>`;
+  } else {
+    breakdown += `<div class="row"><span>Handling</span><span class="tax-zero">INCLUIDO</span></div>`;
+  }
+
+  breakdown += `<div class="row" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(201,169,97,0.15);"><span>Valor producto (FOB)</span><span>$${valor.toFixed(2)}</span></div>`;
+  breakdown += `<div class="row"><span>Seguro aéreo SAT (2.2%)</span><span>$${seguro.toFixed(2)}</span></div>`;
+  breakdown += `<div class="row"><span><strong>Base CIF</strong></span><span><strong>$${cif.toFixed(2)}</strong></span></div>`;
+
+  if (categoria.dai === 0) {
+    breakdown += `<div class="row"><span>DAI (${categoria.nombre})</span><span class="tax-zero">$0.00 CAFTA-DR</span></div>`;
+  } else {
+    breakdown += `<div class="row"><span>DAI ${categoria.dai}% (${categoria.nombre})</span><span>$${dai.toFixed(2)}</span></div>`;
+  }
+
+  breakdown += `<div class="row"><span>IVA 12% sobre CIF+DAI</span><span>$${iva.toFixed(2)}</span></div>`;
+  breakdown += `<div class="row" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(201,169,97,0.25);"><span>Tipo de cambio Banguat</span><span class="tax-info">Q ${TIPO_CAMBIO.toFixed(2)}/USD</span></div>`;
+
+  document.getElementById('breakdown').innerHTML = breakdown;
+}
+
+// Founders signup
+function submitFounder(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.signup-btn');
+  const originalText = btn.textContent;
+  btn.textContent = '✓ Registro recibido · Te contactaremos por WhatsApp';
+  btn.disabled = true;
+
+  const counter = document.getElementById('founder-count');
+  const current = parseInt(counter.textContent);
+  if (current > 0) counter.textContent = current - 1;
+
+  setTimeout(() => {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    e.target.reset();
+  }, 5000);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (document.getElementById('mobileMenu').classList.contains('active')) {
+      toggleMenu();
+    }
+  });
+});
+
+// Initialize calculator
+window.addEventListener('load', calcular);
+</script>
+
+</body>
+</html>
