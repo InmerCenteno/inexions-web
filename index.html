@@ -1456,9 +1456,53 @@ button, a, input, select { touch-action: manipulation; }
   font-size: 13px;
   letter-spacing: 0.02em;
   border-bottom: 0;
-  position: sticky;
+}
+
+/* Floating sticky header clone for mobile */
+.compare-sticky-clone {
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  background: var(--navy-950);
+  box-shadow: 0 4px 20px rgba(10,22,40,0.3);
+}
+.compare-sticky-clone.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.compare-sticky-clone table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.compare-sticky-clone th {
+  background: var(--navy-950);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 12px 8px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.compare-sticky-clone th:first-child {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.compare-sticky-clone .compare-inex {
+  background: var(--gold);
+  color: var(--navy-950);
 }
 .compare-table thead th:first-child {
   font-family: var(--font-mono);
@@ -3287,6 +3331,56 @@ function submitFounder(e) {
     form.reset();
   }, 800);
 }
+
+// =========================================
+// STICKY COMPARE TABLE HEADER
+// =========================================
+(function() {
+  const table = document.querySelector('.compare-table');
+  const wrap = document.querySelector('.compare-table-wrap');
+  if (!table || !wrap) return;
+
+  const thead = table.querySelector('thead');
+
+  // Create floating clone
+  const clone = document.createElement('div');
+  clone.className = 'compare-sticky-clone';
+  const cloneTable = document.createElement('table');
+  cloneTable.innerHTML = thead.innerHTML;
+  clone.appendChild(cloneTable);
+  document.body.appendChild(clone);
+
+  // Sync column widths and horizontal scroll
+  function syncWidths() {
+    const origCells = thead.querySelectorAll('th');
+    const cloneCells = cloneTable.querySelectorAll('th');
+    const wrapRect = wrap.getBoundingClientRect();
+    clone.style.left = wrapRect.left + 'px';
+    clone.style.width = wrapRect.width + 'px';
+    cloneTable.style.width = table.offsetWidth + 'px';
+    cloneTable.style.marginLeft = -wrap.scrollLeft + 'px';
+    origCells.forEach((cell, i) => {
+      if (cloneCells[i]) {
+        cloneCells[i].style.width = cell.offsetWidth + 'px';
+      }
+    });
+  }
+
+  // Show/hide based on scroll position
+  function checkVisibility() {
+    const theadRect = thead.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    // Show clone when original thead scrolls above viewport AND table is still in view
+    const shouldShow = theadRect.top < 0 && wrapRect.bottom > 60;
+    clone.classList.toggle('visible', shouldShow);
+    if (shouldShow) syncWidths();
+  }
+
+  // Sync horizontal scroll
+  wrap.addEventListener('scroll', syncWidths);
+  window.addEventListener('scroll', checkVisibility, { passive: true });
+  window.addEventListener('resize', () => { syncWidths(); checkVisibility(); });
+})();
 
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
