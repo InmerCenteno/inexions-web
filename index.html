@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0A1628">
 <title>Casillero Virtual USA a Guatemala desde $3.19/lb | iNexions — Sin Cobros Ocultos</title>
 <meta name="description" content="Tu casillero en Virginia, USA desde $3.19/lb. Compra en Amazon, Shein, Temu y recibe en Guatemala. Precios en quetzales, factura FEL, pago contra entrega. Sin peso volumétrico. Precio Blindado: si aduana cobra más, nosotros pagamos.">
-<meta name="keywords" content="casillero virtual guatemala, casillero usa guatemala, envios de usa a guatemala, comprar en amazon para guatemala, casillero virginia guatemala, traer temu a guatemala, envios estados unidos guatemala precio libra, encomiendas usa guatemala, courier guatemala, inexions">
+<meta name="keywords" content="casillero virtual guatemala, casillero usa guatemala, envios de usa a guatemala, comprar en amazon para guatemala, casillero virginia guatemala, traer temu a guatemala, envios estados unidos guatemala precio libra, encomiendas usa guatemala, courier guatemala, inexions, compras asistidas usa guatemala, envio express documentos guatemala, personal shopper amazon guatemala">
 <meta name="author" content="iNexions LLC">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://inexions.com/">
@@ -119,6 +119,32 @@
         "price": "3.19",
         "priceCurrency": "USD",
         "description": "Precio por libra de peso real. Envío aéreo USA a Guatemala. Sin peso volumétrico."
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Compras Asistidas (Personal Shopper)",
+      "provider": {"@type": "Organization", "name": "iNexions LLC"},
+      "areaServed": {"@type": "Country", "name": "Guatemala"},
+      "description": "Servicio de compras asistidas en tiendas de USA (Amazon, Walmart, eBay, Target). Compramos por ti si no tienes tarjeta internacional.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.00",
+        "priceCurrency": "USD",
+        "description": "5% sobre el valor del producto. Mínimo $3.00, máximo $25.00 por compra."
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "iNexions Express - Documentos y Paquetes Urgentes",
+      "provider": {"@type": "Organization", "name": "iNexions LLC"},
+      "areaServed": {"@type": "Country", "name": "Guatemala"},
+      "description": "Envío express de documentos legales, medicinas y paquetes urgentes de USA a Guatemala en 48-72 horas.",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.99",
+        "priceCurrency": "USD",
+        "description": "Sobre o paquete hasta 1 lb. Cada lb adicional $9.99. Máximo 5 lbs."
       }
     }
   ]
@@ -1232,6 +1258,177 @@ button, a, input, select { touch-action: manipulation; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+/* ============ SERVICES (COMPRAS ASISTIDAS + EXPRESS) ============ */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+.service-card {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(10,22,40,0.1);
+}
+.service-card-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-950);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.service-card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--navy-950);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--navy-950);
+  margin-bottom: 12px;
+}
+.service-card h3 em {
+  color: var(--gold-deep);
+  font-style: italic;
+}
+.service-card-desc {
+  color: var(--navy-700);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.service-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.service-price-main {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-950);
+}
+.service-price-unit {
+  font-size: 14px;
+  color: var(--navy-600);
+}
+.service-price-note {
+  font-size: 13px;
+  color: var(--navy-500);
+  margin-bottom: 24px;
+}
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.service-features li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--navy-700);
+  border-bottom: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-features li::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.service-features li:last-child {
+  border-bottom: 0;
+}
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--navy-950);
+  color: var(--cream);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.2s;
+}
+.service-cta:hover {
+  background: var(--navy-800);
+  transform: translateY(-2px);
+}
+
+/* Insurance add-on callout */
+.insurance-addon {
+  background: linear-gradient(135deg, var(--navy-950) 0%, #1a2d4d 100%);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.insurance-addon-text {
+  color: var(--cream);
+}
+.insurance-addon-text h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.insurance-addon-text h4 em {
+  color: var(--gold-bright);
+  font-style: italic;
+}
+.insurance-addon-text p {
+  font-size: 14px;
+  color: rgba(250,245,236,0.7);
+  max-width: 560px;
+}
+.insurance-addon-price {
+  text-align: center;
+  flex-shrink: 0;
+}
+.insurance-addon-price .price-big {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+.insurance-addon-price .price-unit {
+  font-size: 13px;
+  color: rgba(250,245,236,0.6);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .insurance-addon { flex-direction: column; text-align: center; }
 }
 
 /* ============ PLANS ============ */
@@ -2750,6 +2947,74 @@ thead .compare-inex {
   </div>
 </section>
 
+<!-- SERVICIOS ADICIONALES -->
+<section class="section" id="servicios">
+  <div class="section-inner">
+    <div class="section-tag">Más que un casillero</div>
+    <h2 class="section-title">Servicios que <em>nadie más ofrece</em>.</h2>
+    <p class="section-subtitle">Porque tu experiencia no termina con el casillero. Compras asistidas para los que no tienen tarjeta internacional y envío express para lo que no puede esperar.</p>
+    <div class="services-grid">
+
+      <!-- COMPRAS ASISTIDAS -->
+      <div class="service-card reveal">
+        <div class="service-card-badge">Personal Shopper</div>
+        <div class="service-card-icon">🛒</div>
+        <h3>Compras <em>Asistidas</em></h3>
+        <p class="service-card-desc">¿No tenés tarjeta internacional? ¿No sabés navegar Amazon en inglés? Nosotros compramos por vos. Mandanos el link del producto y nos encargamos de todo: compra, recepción en Virginia, y envío a Guatemala.</p>
+        <div class="service-pricing">
+          <span class="service-price-main">5%</span>
+          <span class="service-price-unit">sobre el valor del producto</span>
+        </div>
+        <p class="service-price-note">Mínimo $3.00 por compra · Máximo $25.00 por compra</p>
+        <ul class="service-features">
+          <li>Compramos en Amazon, Walmart, eBay, Target, Best Buy y más</li>
+          <li>Te mandamos cotización antes de comprar — sin sorpresas</li>
+          <li>Aplicamos cupones y descuentos disponibles</li>
+          <li>Ahorrás el 7% de Sales Tax de Virginia</li>
+          <li>Recibís factura detallada de cada compra</li>
+          <li>Incluido GRATIS: 2 compras/año en plan Elite</li>
+        </ul>
+        <a href="https://wa.me/17038816360?text=Hola%20iNexions%2C%20quiero%20usar%20el%20servicio%20de%20Compras%20Asistidas.%20Ac%C3%A1%20est%C3%A1%20el%20link%20del%20producto%3A%20" class="service-cta" target="_blank" rel="noopener">Enviar link del producto →</a>
+      </div>
+
+      <!-- iNEXIONS EXPRESS -->
+      <div class="service-card reveal">
+        <div class="service-card-badge">Entrega 48-72 hrs</div>
+        <div class="service-card-icon">⚡</div>
+        <h3>iNexions <em>Express</em></h3>
+        <p class="service-card-desc">Documentos legales, medicinas, paquetes urgentes. Lo que no puede esperar, lo enviamos express con entrega garantizada en 48-72 horas a Ciudad de Guatemala.</p>
+        <div class="service-pricing">
+          <span class="service-price-main">$19.99</span>
+          <span class="service-price-unit">sobre / hasta 1 lb</span>
+        </div>
+        <p class="service-price-note">Cada lb adicional: $9.99 · Máximo 5 lbs por envío express</p>
+        <ul class="service-features">
+          <li>Documentos legales: poderes, títulos, contratos</li>
+          <li>Medicinas OTC y con receta (requiere prescripción)</li>
+          <li>Paquetes urgentes hasta 5 lbs</li>
+          <li>Tracking en tiempo real por WhatsApp</li>
+          <li>Confirmación de entrega con foto</li>
+          <li>Seguro incluido hasta $200</li>
+        </ul>
+        <a href="https://wa.me/17038816360?text=Hola%20iNexions%2C%20necesito%20enviar%20algo%20urgente%20con%20iNexions%20Express.%20" class="service-cta" target="_blank" rel="noopener">Enviar express ahora →</a>
+      </div>
+
+    </div>
+
+    <!-- SEGURO EXTRA -->
+    <div class="insurance-addon reveal">
+      <div class="insurance-addon-text">
+        <h4>Seguro <em>Extra</em> — protege lo que más vale</h4>
+        <p>Todos los planes Pro y Elite incluyen seguro hasta $300. ¿Tu paquete vale más? Agrega cobertura adicional por solo $0.99 por cada $100 extra. Sin deducible, sin letra pequeña.</p>
+      </div>
+      <div class="insurance-addon-price">
+        <div class="price-big">$0.99</div>
+        <span class="price-unit">por cada $100 adicional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PLANS -->
 <section class="section plans" id="planes">
   <div class="section-inner">
@@ -2804,9 +3069,11 @@ thead .compare-inex {
           <li>Todo del plan Smart</li>
           <li>Domicilio GRATIS metro (4 paq/mes)</li>
           <li>Prioridad de despacho</li>
-          <li>Seguro hasta $300</li>
+          <li>Seguro incluido hasta $300</li>
+          <li>Seguro extra: $0.99/cada $100</li>
           <li>Cashback 2% mensual</li>
           <li>iNexPoints 1.5x por libra</li>
+          <li>Express: 10% descuento</li>
           <li>Devolución gratis semestral</li>
         </ul>
         <a href="#fundadores" class="plan-cta">Elegir Pro</a>
@@ -2821,8 +3088,10 @@ thead .compare-inex {
           <li>Todo del plan Pro</li>
           <li>Tarifa más baja posible</li>
           <li>Domicilio GRATIS (8 paq/mes)</li>
-          <li>Personal Shopper (2/año)</li>
-          <li>Seguro hasta $500</li>
+          <li>Personal Shopper GRATIS (2/año)</li>
+          <li>Express: 15% descuento</li>
+          <li>Seguro incluido hasta $300</li>
+          <li>Seguro extra: $0.99/cada $100</li>
           <li>Cashback 3% mensual</li>
           <li>Devoluciones (3 gratis/año)</li>
           <li>iNexPoints 2x por libra</li>
@@ -2971,7 +3240,7 @@ thead .compare-inex {
     <p class="section-subtitle">Cada paquete respaldado por garantías reales. No letra pequeña. No "términos y condiciones aplican". Solo promesas que cumplimos.</p>
     <div class="guar-grid">
       <div class="guar-card"><div class="guar-number">I</div><h4 class="guar-title">Garantía de devolución</h4><p class="guar-desc">30 días para devolver tu primer envío sin preguntas. Si no te enamoras del servicio, te reembolsamos el 100% del flete.</p></div>
-      <div class="guar-card"><div class="guar-number">II</div><h4 class="guar-title">Seguro incluido</h4><p class="guar-desc">Todos los envíos incluyen seguro sin costo adicional. Planes Elite protegen hasta $500 USD por paquete.</p></div>
+      <div class="guar-card"><div class="guar-number">II</div><h4 class="guar-title">Seguro incluido</h4><p class="guar-desc">Todos los envíos incluyen seguro sin costo adicional. Planes Pro y Elite protegen hasta $300 USD. Cobertura extra disponible a $0.99 por cada $100.</p></div>
       <div class="guar-card"><div class="guar-number">III</div><h4 class="guar-title">Respuesta en 24 horas</h4><p class="guar-desc">Cualquier incidencia se escucha y atiende en máximo 24 horas. Sin burocracia, sin bots, con persona real.</p></div>
       <div class="guar-card"><div class="guar-number">IV</div><h4 class="guar-title">Foto de entrega</h4><p class="guar-desc">Cada entrega incluye prueba fotográfica con geolocalización. Sabes exactamente dónde y cuándo llegó.</p></div>
     </div>
